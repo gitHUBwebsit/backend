@@ -29,7 +29,7 @@ class FrontController extends Controller
         // return view('front/news');
     }
 
-    function news_info()
+    function news_info($news_id)
     {
         $news = DB::table('news')->where('id','=',$news_id)->first();
 
