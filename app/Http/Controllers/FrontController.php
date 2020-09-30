@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\place;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 class FrontController extends Controller
@@ -44,16 +45,23 @@ class FrontController extends Controller
     function store_contact(Request $request)
     {
         // dd($request->all());
-       DB::table('place')->insert(
-            [
-            'email' =>$request->email,
-            'Taiwan' =>$request->Taiwan,
-            'image' =>'',
-            'place_name'=>$request->place_name,
-            'content' =>$request->content
-            ]
+    //    DB::table('place')->insert(
+    //         [
+    //         'email' =>$request->email,
+    //         'Taiwan' =>$request->Taiwan,
+    //         'image' =>'',
+    //         'place_name'=>$request->place_name,
+    //         'content' =>$request->content
+    //         ]
 
-        );
+    //     );
+    // $news_place = new Place();
+    // $news_place->email=$request->email;
+    // $news_place->Taiwan=$request->Taiwan;
+    // $news_place->image=$request->image;
+    // $news_place->place_name=$request->place_name;
+    // $news_place->content=$request->content;
+    // $news_place->save();
 
     }
 
