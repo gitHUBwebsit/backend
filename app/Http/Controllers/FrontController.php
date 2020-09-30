@@ -41,5 +41,20 @@ class FrontController extends Controller
     {
         return view('front/template');
     }
+    function store_contact(Request $request)
+    {
+        // dd($request->all());
+       DB::table('place')->insert(
+            [
+            'email' =>$request->email,
+            'Taiwan' =>$request->Taiwan,
+            'image' =>'',
+            'place_name'=>$request->place_name,
+            'content' =>$request->content
+            ]
+
+        );
+
+    }
 
 }
