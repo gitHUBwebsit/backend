@@ -26,4 +26,4 @@ Route::get('/news_info/{news_id}', 'FrontController@news_info');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')
